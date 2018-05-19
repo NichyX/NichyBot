@@ -28,7 +28,9 @@ client.on('guildMemberAdd', member => {
   // Send the message to a designated channel on a server:
   const channel = member.guild.channels.find('test', 'test-log');
   // Do nothing if the channel wasn't found on this server
-  if (!channel) return;
+  if (!channel) {
+      message.reply('Non trovo il canale :( ')
+  }
   // Send the message, mentioning the member
   channel.send(`Benvenuto nel server, ${member}`);
 });
