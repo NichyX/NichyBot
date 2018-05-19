@@ -11,5 +11,26 @@ client.on('message', message => {
   	}
 });
 
-// THIS  MUST  BE  THIS  WAY
+/*
+client.on('message', message => {
+    if (message.content === 'Cambia colore') {
+    	role.setColor('#FF0000')
+  	}
+});
+*/
+
+/*
+  Benvenuto
+*/
+
+// Create an event listener for new guild members
+client.on('guildMemberAdd', member => {
+  // Send the message to a designated channel on a server:
+  const channel = member.guild.channels.find('test', 'test-log');
+  // Do nothing if the channel wasn't found on this server
+  if (!channel) return;
+  // Send the message, mentioning the member
+  channel.send(`Benvenuto nel server, ${member}`);
+});
+
 client.login(process.env.BOT_TOKEN);
