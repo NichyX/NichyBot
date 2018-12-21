@@ -22,7 +22,8 @@ client.on('message', message => {
   // If the message is "what is my avatar"
   if (message.content === 'Avatar perfavore') {
     // Send the user's avatar URL
-    message.reply(message.author.avatarURL);
+      message.reply(message.mentions.members.first());
+      message.reply(message.author.avatarURL);
   }
 });
 
