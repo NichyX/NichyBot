@@ -1,5 +1,8 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
+// Extract the required classes from the discord.js module
+const { Client, RichEmbed } = require('discord.js');
+
+// Create an instance of a Discord client
+const client = new Client();
 
 client.on('ready', () => {
     console.log('Sono vivo!');
