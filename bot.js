@@ -27,28 +27,6 @@ client.on('message', message => {
   }
 });
 
-client.on('message', message => {
-    if (message.content === 'nichybotinfo') {
-    	const exampleEmbed = new Discord.RichEmbed()
-    .setColor('#0099ff')
-    .setTitle('Titolo')
-    .setURL('https://www.twitch.tv/nichyx')
-    .setAuthor('NichyX', 'https://cdn.discordapp.com/avatars/213584350812438528/c2514a01a286ddf9005a21ac258d3706.png?size=2048', 'https://www.twitch.tv/nichyx')
-    .setDescription('Il bot di NichyX')
-    .setThumbnail('https://cdn.discordapp.com/avatars/213584350812438528/c2514a01a286ddf9005a21ac258d3706.png?size=2048')
-    .addField('Regular field title', 'Some value here')
-    .addBlankField()
-    .addField('Inline field title', 'Some value here', true)
-    .addField('Inline field title', 'Some value here', true)
-    .addField('Inline field title', 'Some value here', true)
-    .setImage('https://cdn.discordapp.com/avatars/213584350812438528/c2514a01a286ddf9005a21ac258d3706.png?size=2048')
-    .setTimestamp()
-    .setFooter('©2019, NichyX. Tutti i diritti riservati.    ', 'https://cdn.discordapp.com/avatars/213584350812438528/c2514a01a286ddf9005a21ac258d3706.png?size=2048');
-
-channel.send(exampleEmbed);
-  	}
-});
-
 /*
 client.on('message', message => {
     if (message.content === 'Cambia colore') {
