@@ -16,15 +16,11 @@ client.on('ready', () => {
 	setLogChannel(data.voiceLogChannel);
 });
 
+// Controllo se il bot è online
+
 client.on('message', message => {
     if (message.content === 'Sei vivo?') {
     	message.reply('Si, grazie per avermi creato :heart: ');
-  	}
-});
-
-client.on('message', message => {
-    if (message.content === 'Porcodio') {
-    	message.reply('Diocane ');
   	}
 });
 
